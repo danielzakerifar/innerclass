@@ -6,17 +6,23 @@ public class Main {
 
     public static void main(String[] args) {
 
-        class ClickListener implements Button.OnClickListener {
-            public ClickListener() {
-                System.out.println("I have been attached");
-            }
-
+//        class ClickListener implements Button.OnClickListener {
+//            public ClickListener() {
+//                System.out.println("I have been attached");
+//            }
+//
+//            @Override
+//            public void onClick(String title) {
+//                System.out.println(title + "was clicked");
+//            }
+//        }
+//        btnPrint.setOnClickListener(new ClickListener());
+        btnPrint.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(String title) {
                 System.out.println(title + "was clicked");
             }
-        }
-        btnPrint.setOnClickListener(new ClickListener());
+        });
         listen();
     }
     private  static void listen() {
